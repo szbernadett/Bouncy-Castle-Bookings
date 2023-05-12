@@ -1,0 +1,67 @@
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Colour (
+ id INTEGER,
+ name TEXT NOT NULL UNIQUE,
+ PRIMARY KEY(id AUTOINCREMENT)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Dimension (
+ id INTEGER,
+ dimensionValues TEXT,
+ PRIMARY KEY(id AUTOINCREMENT)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Price (
+ id INTEGER,
+ priceValue TEXT NOT NULL UNIQUE,
+ PRIMARY KEY(id AUTOINCREMENT)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS BouncyCastle (
+ id INTEGER,
+ name TEXT NOT NULL UNIQUE,
+ dimensionId INTEGER,
+ colourId INTEGER,
+ priceId INTEGER,
+ PRIMARY KEY(id AUTOINCREMENT),
+ FOREIGN KEY(dimensionId) REFERENCES Dimension(id),
+ FOREIGN KEY(colourId) REFERENCES Colour(id),
+ FOREIGN KEY(priceId) REFERENCES Price(id)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS City (
+ id INTEGER,
+ name TEXT NOT NULL UNIQUE,
+ PRIMARY KEY(id AUTOINCREMENT)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Postcode (
+ id INTEGER,
+ postcode TEXT NOT NULL UNIQUE,
+ cityId INTEGER,
+ PRIMARY KEY(id AUTOINCREMENT),
+ FOREIGN KEY(cityId) REFERENCES City(id) ON DELETE CASCADE
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Address (
+ id INTEGER,
+ addressLine1 TEXT NOT NULL,
+ addressLine2 TEXT,
+ postcodeId INTEGER,
+ PRIMARY KEY(id AUTOINCREMENT),
+ FOREIGN KEY(postcodeId) REFERENCES Postcode(id) ON DELETE CASCADE
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Customer (
+ id INTEGER,
+ firstName TEXT NOT NULL,
+ lastName TEXT NOT NULL,
+ phoneNumber TEXT NOT NULL,
+ email TEXT NOT NULL,
+ addressId INTEGER,
+ PRIMARY KEY(id AUTOINCREMENT),
+ FOREIGN KEY(addressId) REFERENCES Address(id)
+ );
+[statement_builder.py:34 -    create_table_stmt() ] CREATE TABLE IF NOT EXISTS Booking (
+ id INTEGER,
+ date TEXT,
+ customerId INTEGER,
+ bouncyCastleId INTEGER,
+ deliveryAddressId INTEGER DEFAULT 0,
+ PRIMARY KEY(id AUTOINCREMENT),
+ FOREIGN KEY(customerId) REFERENCES Customer(id) ON DELETE CASCADE,
+ FOREIGN KEY(bouncyCastleId) REFERENCES BouncyCastle(id) ON DELETE CASCADE,
+ FOREIGN KEY(deliveryAddressId) REFERENCES Address(id) ON DELETE SET DEFAULT
+ );

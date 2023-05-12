@@ -1,0 +1,2774 @@
+[db_helper.py:571 -       get_all_prices() ] SELECT * FROM Price;
+[db_helper.py:458 -      get_all_colours() ] SELECT * FROM Colour
+[db_helper.py:515 -   get_all_dimensions() ] SELECT * FROM Dimension;
+[db_helper.py:628 - get_all_bouncy_castles() ] SELECT * FROM BouncyCastle;
+[db_helper.py:256 -       get_all_cities() ] SELECT * FROM City;
+[db_helper.py:187 -    get_all_postcodes() ] SELECT * FROM Postcode;
+[db_helper.py:314 -    get_all_addresses() ] SELECT * FROM Address;
+[db_helper.py:383 -    get_all_customers() ] SELECT * FROM Customer;
+[db_helper.py:700 -     get_all_bookings() ] SELECT * FROM Booking;
+[db_helper.py:774 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:803 - get_bookings_previous_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date < DATE('now')
+                    GROUP BY date 
+                    ORDER BY date DESC
+                    LIMIT 1
+                    );
+[db_helper.py:832 - get_bookings_next_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date > DATE('now')
+                    GROUP BY date 
+                    ORDER BY date ASC
+                    LIMIT 1
+                    );
+[db_helper.py:774 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:774 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:557 -       get_all_prices() ] SELECT * FROM Price;
+[db_helper.py:450 -      get_all_colours() ] SELECT * FROM Colour
+[db_helper.py:504 -   get_all_dimensions() ] SELECT * FROM Dimension;
+[db_helper.py:611 - get_all_bouncy_castles() ] SELECT * FROM BouncyCastle;
+[db_helper.py:252 -       get_all_cities() ] SELECT * FROM City;
+[db_helper.py:186 -    get_all_postcodes() ] SELECT * FROM Postcode;
+[db_helper.py:307 -    get_all_addresses() ] SELECT * FROM Address;
+[db_helper.py:376 -    get_all_customers() ] SELECT * FROM Customer;
+[db_helper.py:680 -     get_all_bookings() ] SELECT * FROM Booking;
+[db_helper.py:752 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:780 - get_bookings_previous_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date < DATE('now')
+                    GROUP BY date 
+                    ORDER BY date DESC
+                    LIMIT 1
+                    );
+[db_helper.py:809 - get_bookings_next_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date > DATE('now')
+                    GROUP BY date 
+                    ORDER BY date ASC
+                    LIMIT 1
+                    );
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:471 - insert_or_update_colour() ] INSERT OR IGNORE INTO Colour VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:524 - insert_or_update_dimension() ] INSERT OR IGNORE INTO Dimension VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         dimensionValues=?;
+[db_helper.py:524 - insert_or_update_dimension() ] INSERT OR IGNORE INTO Dimension VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         dimensionValues=?;
+[db_helper.py:524 - insert_or_update_dimension() ] INSERT OR IGNORE INTO Dimension VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         dimensionValues=?;
+[db_helper.py:524 - insert_or_update_dimension() ] INSERT OR IGNORE INTO Dimension VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         dimensionValues=?;
+[db_helper.py:524 - insert_or_update_dimension() ] INSERT OR IGNORE INTO Dimension VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         dimensionValues=?;
+[db_helper.py:577 - insert_or_update_price() ] INSERT OR IGNORE INTO Price VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         priceValue=?;
+[db_helper.py:577 - insert_or_update_price() ] INSERT OR IGNORE INTO Price VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         priceValue=?;
+[db_helper.py:577 - insert_or_update_price() ] INSERT OR IGNORE INTO Price VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         priceValue=?;
+[db_helper.py:577 - insert_or_update_price() ] INSERT OR IGNORE INTO Price VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         priceValue=?;
+[db_helper.py:577 - insert_or_update_price() ] INSERT OR IGNORE INTO Price VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         priceValue=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:641 - insert_or_update_bouncy_castle() ] INSERT OR IGNORE INTO BouncyCastle VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       name=?,
+                       dimensionId=?,
+                       colourId=?,
+                       priceId=?;
+[db_helper.py:273 - insert_or_update_city() ] INSERT OR IGNORE INTO City VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:273 - insert_or_update_city() ] INSERT OR IGNORE INTO City VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:273 - insert_or_update_city() ] INSERT OR IGNORE INTO City VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:273 - insert_or_update_city() ] INSERT OR IGNORE INTO City VALUES(?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         name=?;
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:215 - insert_or_update_postcode() ] 
+                    INSERT OR IGNORE INTO Postcode VALUES(?, ?, ?) 
+                    ON CONFLICT (id) DO UPDATE
+                    SET
+                    postcode=?,
+                    cityId=?
+                    
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:336 - insert_or_update_address() ] INSERT OR IGNORE INTO Address VALUES(?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         addressLine1=?,
+                         addressLine2=?,
+                         postcodeId=?
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:409 - insert_or_update_customer() ] INSERT OR IGNORE INTO Customer VALUES(?, ?, ?, ?, ?, ?)
+                         ON CONFLICT (id) DO UPDATE
+                         SET
+                         firstName=?,
+                         lastName=?,
+                         phoneNumber=?,
+                         email=?,
+                         addressId=?
+                         ;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:715 - insert_or_update_booking() ] INSERT INTO Booking 
+                       VALUES(?, ?, ?, ?, ?)
+                       ON CONFLICT (id) DO UPDATE
+                       SET
+                       date=?,
+                       customerId=?,
+                       bouncyCastleId=?,
+                       deliveryAddressId=?;
+[db_helper.py:557 -       get_all_prices() ] SELECT * FROM Price;
+[db_helper.py:450 -      get_all_colours() ] SELECT * FROM Colour
+[db_helper.py:504 -   get_all_dimensions() ] SELECT * FROM Dimension;
+[db_helper.py:611 - get_all_bouncy_castles() ] SELECT * FROM BouncyCastle;
+[db_helper.py:252 -       get_all_cities() ] SELECT * FROM City;
+[db_helper.py:186 -    get_all_postcodes() ] SELECT * FROM Postcode;
+[db_helper.py:307 -    get_all_addresses() ] SELECT * FROM Address;
+[db_helper.py:376 -    get_all_customers() ] SELECT * FROM Customer;
+[db_helper.py:680 -     get_all_bookings() ] SELECT * FROM Booking;
+[db_helper.py:752 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:780 - get_bookings_previous_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date < DATE('now')
+                    GROUP BY date 
+                    ORDER BY date DESC
+                    LIMIT 1
+                    );
+[db_helper.py:809 - get_bookings_next_day() ] SELECT * FROM Booking WHERE date IN(
+                    SELECT date FROM Booking WHERE date > DATE('now')
+                    GROUP BY date 
+                    ORDER BY date ASC
+                    LIMIT 1
+                    );
+[db_helper.py:752 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:752 -   get_bookings_today() ] SELECT * FROM Booking WHERE date=DATE('now')
+[db_helper.py:974 - get_all_non_booked_bouncy_castles() ] SELECT * FROM BouncyCastle WHERE id NOT IN (
+                       SELECT bouncyCastleId FROM Booking WHERE date >= DATE('now')
+                         );
